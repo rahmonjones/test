@@ -1,20 +1,29 @@
 name: Terraform
+
 on: [push]
-jobs: 
+
+jobs:
   terraform:
-     runs-on: ubuntu-latest
-     steps:
-       - name: checkout
-         uses: action/checkout@v3
-       - name: setup terraform
-         uses: hashicorp/setup-tearraform@v2
-         with:
-            terraform_version: 1.9.2
-       - name: initialization
-         run: terraform init
-       - name: validate
-         run: terraform validate
-       - name: format
-         run: terraform fmt -check
-       - name: plan action
-         run: terraform plan
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v3        # Fixed 'actions' instead of 'action'
+
+      - name: Setup Terraform
+        uses: hashicorp/setup-terraform@v2     # Fixed 'setup-terraform' typo
+        with:
+          terraform_version: 1.9.2
+
+      - name: Initialization
+        run: terraform init
+
+      - name: Validate
+        run: terraform validate
+
+      - name: Format
+        run: terraform fmt -check
+
+      - name: Plan Action
+        run: terraform plan
+

@@ -9,7 +9,7 @@ jobs:
        - name: setup terraform
          uses: hashicorp/setup-tearraform@v2
          with:
-            terraform_version: 1.9
+            terraform_version: 1.9.2
        - name: initialization
          run: terraform init
        - name: validate

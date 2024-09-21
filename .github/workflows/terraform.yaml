@@ -2,7 +2,7 @@ name: Terraform
 on: [push]
 jobs: 
   terraform:
-     runo-on: ubuntu-latest
+     runs-on: ubuntu-latest
      steps:
        - name: checkout
          uses: action/checkout@v3

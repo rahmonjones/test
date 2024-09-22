@@ -4,7 +4,7 @@ on: [push]
 env:
    AWS_ACCESS-KEY_ID: ${{ secrets.ACCESS_KEY }}
    AWS_SECRET_ACCESS_KEY: ${{ secrets.SECRET_ACCESS_KEY }} 
-   AWS_DEFAULT_REGION="us-east-2"
+
 jobs:
   terraform:
     runs-on: ubuntu-latest

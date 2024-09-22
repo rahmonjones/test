@@ -1,8 +1,8 @@
 provider "aws" {
-  region = "us-west-2"
+  region = "us-east-2"
 }
 
-resource "aws_vpc" "my_vpc" { # Changed 'resources' to 'resource'
-  cidr_block = "10.0.0.0/24"  # Corrected the CIDR block
+resource "aws_vpc" "my_vpc" {
+  cidr_block = "10.0.0.0/24"
 }
 
